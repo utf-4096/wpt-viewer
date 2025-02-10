@@ -1,0 +1,12 @@
+@use '@catppuccin/highlightjs/css/catppuccin-frappe.css' as _ctp-hljs;
+
+.Code {
+    white-space: pre-wrap;
+    width: 100%;
+
+    font-size: inherit;
+    user-select: text;
+
+    border-radius: 4px;
+    line-height: 1.6;
+}

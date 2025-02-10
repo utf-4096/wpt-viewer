@@ -1,0 +1,27 @@
+@use '../mixins/color.scss';
+@use '../base/common.scss';
+
+.InlineStatusCounter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-weight: normal;
+    padding: 2px 4px;
+    border-radius: 4px;
+
+    @include color.text-colorable;
+
+    &-inverted {
+        background: var(--mixin-colorable-color);
+        color: common.$color-background;
+    }
+
+    &-clickable {
+        cursor: pointer;
+    }
+
+    &-clickable:not(&-inverted):hover {
+        box-shadow: 0 0 0 2px var(--mixin-colorable-color);
+    }
+}

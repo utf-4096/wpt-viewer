@@ -1,0 +1,76 @@
+@use '../../base/common.scss';
+@use '../../mixins/color.scss' as c;
+@use 'sass:color';
+
+.TestList {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+
+    tfoot th {
+        text-align: start;
+        font-weight: normal;
+        padding: 8px;
+        box-shadow: 0 -1px #fff1;
+    }
+
+    .footer-stats {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+
+        > span {
+            margin-right: 8px;
+        }
+
+        .counters {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .subtests {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+
+            svg {
+                margin-right: 8px;
+            }
+        }
+
+        .subtests-passed {
+            color: common.$color-success;
+            @include c.text-colorable;
+        }
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+
+        background: color.change(common.$color-background, $alpha: 0.75);
+        backdrop-filter: blur(8px);
+
+        th {
+            cursor: pointer;
+            padding: 8px;
+            text-align: start;
+            box-shadow: 0 1px #fff1;
+            white-space: nowrap;
+
+            svg {
+                margin-left: 4px;
+                margin-bottom: -2px;
+            }
+        }
+
+        th.total,
+        th.failing,
+        th.passing,
+        th.ratio {
+            width: 0;
+            text-align: end;
+        }
+    }
+}

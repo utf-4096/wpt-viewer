@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use '@catppuccin/palette/scss/_frappe.scss' as ctp;
+
+$color-primary: ctp.$blue;
+$color-secondary: ctp.$overlay1;
+$color-danger: ctp.$red;
+$color-warning: ctp.$peach;
+$color-success: ctp.$green;
+
+$color-background: ctp.$base;
+$color-text: ctp.$text;
+$color-link: $color-primary;
+
+$color-control: ctp.$surface0;
+$color-control-hover: ctp.$surface1;
+$color-control-invert: ctp.$mantle;
+
+$shadow-low: 0 2px 8px #0003;
+$shadow-high: 0 4px 16px #0001;
+$shadow-focus: 0 4px 16px color.change($color-primary, $alpha: 0.25);
+
+$border-normal: 2px solid #0003;
+$border-focus: 2px solid $color-primary;

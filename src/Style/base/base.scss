@@ -1,0 +1,94 @@
+@use '@fontsource/inter';
+@use '@fontsource/inter/600.css' as fsi_600;
+@use '@fontsource/inter/800.css' as fsi_800;
+@use '@catppuccin/palette/scss/_mocha.scss';
+@use './common.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 15px;
+    background: common.$color-background;
+    color: common.$color-text;
+    font-family: Inter, Cantarell, sans-serif;
+    user-select: none;
+}
+
+#root {
+    display: flex;
+    justify-content: safe center;
+}
+
+button, input, textarea {
+    font: inherit;
+    color: inherit;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.unstyled) {
+    color: common.$color-link;
+
+    &:hover {
+        background: common.$color-link;
+        color: common.$color-background;
+    }
+}
+
+a.unstyled {
+    color: inherit;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-inverted {
+    color: common.$color-background;
+}
+
+.with-tooltip {
+    position: relative;
+
+    &::before {
+        content: attr(data-title);
+
+        position: absolute;
+        top: -4px;
+        left: 50%;
+
+        min-width: 80px;
+        padding: 8px;
+
+        text-align: center;
+        font-weight: normal;
+        white-space: nowrap;
+        pointer-events: none;
+
+        background: common.$color-control;
+        border: common.$border-normal;
+        border-radius: 4px;
+        box-shadow: common.$shadow-low;
+
+        transform: translateY(-80%) translateX(-50%);
+        opacity: 0;
+        transition: opacity 250ms ease, transform 250ms ease;
+    }
+
+    &:hover::before {
+        transform: translateY(-100%) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+
+.bold {
+    font-weight: bold;
+}

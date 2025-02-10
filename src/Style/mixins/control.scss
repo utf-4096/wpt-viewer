@@ -1,0 +1,12 @@
+@use '../base/common.scss';
+
+@mixin focusable {
+    box-shadow: common.$shadow-high;
+    border: 2px solid #0000;
+    transition: box-shadow 250ms ease;
+
+    &:focus-within {
+        border: common.$border-focus;
+        box-shadow: common.$shadow-focus;
+    }
+}

@@ -1,0 +1,49 @@
+@use '../../base/common.scss';
+
+.TestList .row {
+    cursor: pointer;
+
+    td a {
+        padding: 8px;
+    }
+
+    td:not(:has(a)) {
+        padding: 8px;
+    }
+
+    &:hover td {
+        background: common.$color-control;
+    }
+
+    td:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    td:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    th {
+        text-align: start;
+        font-weight: normal;
+    }
+
+    .TestCompletion {
+        font-family: monospace;
+        font-size: 12px;
+        text-align: end;
+    }
+
+    .test-name {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+
+        >.icon {
+            display: inline-block;
+            margin-right: 4px;
+        }
+    }
+}

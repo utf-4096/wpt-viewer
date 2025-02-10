@@ -1,0 +1,25 @@
+@keyframes Breadcrumbs_home_crumb_hover {
+    50% {
+        transform: rotateY(180deg);
+    }
+}
+
+.Breadcrumbs {
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+
+    .crumb {
+        display: flex;
+        line-height: 1;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    .home-crumb:hover svg {
+        animation: Breadcrumbs_home_crumb_hover 2s steps(1) infinite;
+        animation-delay: 2s;
+    }
+}

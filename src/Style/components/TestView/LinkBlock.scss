@@ -1,0 +1,13 @@
+.TestView .LinkBlock {
+    flex-direction: column;
+    gap: 8px;
+
+    .link {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-left: 8px;
+        }
+    }
+}

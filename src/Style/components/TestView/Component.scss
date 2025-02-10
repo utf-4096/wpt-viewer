@@ -1,0 +1,11 @@
+.TestView {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 16px;
+
+    .Throbber {
+        margin: 0 auto;
+    }
+}

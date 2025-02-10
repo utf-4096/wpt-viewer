@@ -1,0 +1,10 @@
+@use '../../mixins/color.scss' as c;
+
+.TestList .TestRow {
+    @include c.var-colorable;
+
+    .icon {
+        color: var(--mixin-colorable-color);
+        line-height: 0;
+    }
+}

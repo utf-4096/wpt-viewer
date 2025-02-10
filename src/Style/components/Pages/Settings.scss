@@ -1,0 +1,30 @@
+@use '../../base/common.scss';
+
+.Settings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 16px;
+    align-items: flex-start;
+    gap: 8px;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        > span {
+            font-weight: 600;
+        }
+    }
+
+    select {
+        border: 0;
+        border-radius: 4px;
+        font: inherit;
+
+        color: inherit;
+        background: common.$color-control;
+        padding: .5rem 1rem;
+    }
+}

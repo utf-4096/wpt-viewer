@@ -1,0 +1,21 @@
+.TestView .MetadataBlock {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .stat {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        span, code {
+            user-select: text;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../mixins/color.scss' as c;
+
+.TestList .DirectoryRow {
+    .status-badge {
+        display: inline-flex;
+        gap: 4px;
+
+        @include c.var-colorable;
+
+        .icon {
+            color: var(--mixin-colorable-color);
+        }
+    }
+
+    .status-badges {
+        display: inline-flex;
+        margin-left: 8px;
+        gap: 8px;
+    }
+
+    .passing {
+        font-family: monospace;
+        font-size: 12px;
+        text-align: end;
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "formatter": {
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "suspicious": {
+                "noExplicitAny": "off"
+            },
+            "security": {
+                "noDangerouslySetInnerHtml": "off"
+            },
+            "style": {
+                "noNonNullAssertion": "off"
+            },
+            "a11y": {
+                "useKeyWithClickEvents": "off"
+            }
+        }
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "json": {
+        "formatter": {
+            "enabled": true
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "enabled": false
+        }
+    },
+    "files": {
+        "include": ["src/**"]
+    }
+}

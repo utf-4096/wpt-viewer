@@ -1,0 +1,52 @@
+@use '../../mixins/color.scss';
+@use '../../base/common.scss';
+
+.TestView .SubtestsBlock-wrapper {
+    .status-stats {
+        display: flex;
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .InlineStatusCounter {
+        min-width: 50px;
+    }
+}
+
+.TestView .SubtestsBlock {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 !important;
+
+    .subtest:not(:first-child) {
+        border-top: 1px solid #0000;
+    }
+
+    .subtest:not(:first-child):not(.subtest-expanded):not(:hover) {
+        border-top-color: #fff1;
+    }
+
+    .subtest:hover,
+    .subtest-expanded {
+        background: #fff1;
+    }
+
+    .subtest,
+    .subtest-description {
+        display: inline-flex;
+        padding: 12px;
+    }
+
+    .subtest {
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        .icon {
+            color: var(--mixin-colorable-color);
+            line-height: 0;
+        }
+
+        @include color.var-colorable;
+    }
+}

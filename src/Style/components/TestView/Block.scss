@@ -1,0 +1,36 @@
+@use '@catppuccin/palette/scss/_frappe.scss' as ctp;
+@use '../../base/common.scss';
+
+.TestView .block-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+
+    .Block {
+        width: 100%;
+    }
+}
+
+.TestView .Block {
+    display: flex;
+    flex-direction: column;
+    background: common.$color-control;
+    border-radius: 4px;
+
+    > header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background: common.$color-control-invert;
+        font-weight: 600;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    > section {
+        display: flex;
+        height: 100%;
+        padding: 16px;
+    }
+}

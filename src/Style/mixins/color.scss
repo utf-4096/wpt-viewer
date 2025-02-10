@@ -1,0 +1,47 @@
+@use '../base/common.scss';
+
+@mixin var-colorable {
+    &-primary {
+        --mixin-colorable-color: #{common.$color-primary};
+    }
+
+    &-secondary {
+        --mixin-colorable-color: #{common.$color-secondary};
+    }
+
+    &-success {
+        --mixin-colorable-color: #{common.$color-success};
+    }
+
+    &-warning {
+        --mixin-colorable-color: #{common.$color-warning};
+    }
+
+    &-danger {
+        --mixin-colorable-color: #{common.$color-danger};
+    }
+}
+
+@mixin background-colorable {
+    background: var(--mixin-colorable-color);
+
+    @include var-colorable;
+}
+
+@mixin border-colorable {
+    border-color: var(--mixin-colorable-color);
+
+    @include var-colorable;
+}
+
+@mixin text-colorable {
+    color: var(--mixin-colorable-color);
+
+    @include var-colorable;
+}
+
+@mixin shadow-colorable {
+    box-shadow: inset 0 0 0 2px var(--mixin-colorable-color);
+
+    @include var-colorable;
+}

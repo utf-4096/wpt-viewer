@@ -1,0 +1,64 @@
+@use '../base/common.scss';
+@use '../mixins/color.scss' as c;
+@use 'sass:color';
+
+.Button {
+    display: inline-flex;
+    align-items: stretch;
+
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: common.$color-control;
+    padding: 0;
+    transition: box-shadow 100ms;
+
+    .icon {
+        padding: .5rem;
+        color: #fff;
+        line-height: 0;
+        background: var(--mixin-colorable-color);
+    }
+
+    .content {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 .75rem;
+    }
+
+    &:focus-visible,
+    &:hover {
+        box-shadow: 0 0 0 4px common.$color-background, 0 0 0 6px common.$color-primary;
+    }
+
+    &:active {
+        position: relative;
+        bottom: -2px;
+    }
+
+    :disabled,
+    &-visibly-disabled {
+        opacity: 50%;
+    }
+
+    &-mini {
+        font-size: 12px;
+
+        .icon {
+            padding: 2px;
+        }
+
+        .content {
+            padding: 0 4px;
+        }
+    }
+
+    &-inverted {
+        .icon {
+            color: var(--mixin-colorable-color);
+            background: none;
+        }
+    }
+
+    @include c.var-colorable;
+}

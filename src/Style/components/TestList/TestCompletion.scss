@@ -1,0 +1,5 @@
+@use '../../mixins/color.scss' as c;
+
+.TestCompletion {
+    @include c.text-colorable;
+}

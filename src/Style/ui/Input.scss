@@ -1,0 +1,37 @@
+@use '../base/common.scss';
+@use '../mixins/control.scss';
+
+.Input {
+    display: inline-flex;
+    border-radius: 8px;
+    background: common.$color-control;
+    overflow: hidden;
+
+    @include control.focusable;
+
+    .icon,
+    input {
+        position: relative;
+        left: 0;
+        transition: left 250ms ease;
+    }
+
+    .icon {
+        padding: .5rem .75rem;
+    }
+
+    input {
+        padding: 0rem;
+        width: 100%;
+        background: none;
+        border: 0;
+    }
+
+    &:has(input:not(:placeholder-shown)),
+    &:focus-within {
+        input,
+        .icon {
+            left: -32px;
+        }
+    }
+}
